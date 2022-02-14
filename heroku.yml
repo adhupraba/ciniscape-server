@@ -1,0 +1,10 @@
+setup:
+  config:
+    DB_URL: "postgres://wpwmuxds:sr6zldQ67ge_Eos13hDq0SQ0r663gShb@john.db.elephantsql.com/wpwmuxds"
+    JWT_SECRET_KEY: "qwejnfasdfalsjp3423rwi23"
+    EMAIL_ID: "ciniscape@hotmail.com"
+    EMAIL_PASSWORD: "Cinisc@pe"
+
+build:
+  docker:
+    server: Dockerfile

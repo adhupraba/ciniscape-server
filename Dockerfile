@@ -1,0 +1,20 @@
+FROM node:14.16.1-alpine
+
+RUN echo "SERVER PORT =>>>" $PORT
+
+ENV DB_URL=$DB_URL
+ENV JWT_SECRET_KEY=$JWT_SECRET_KEY
+ENV EMAIL_ID=$EMAIL_ID
+ENV EMAIL_PASSWORD=$EMAIL_PASSWORD
+
+WORKDIR /app
+
+COPY ./package.json ./
+
+RUN npm install
+
+COPY ./ ./
+
+EXPOSE $PORT
+
+CMD npm run start
